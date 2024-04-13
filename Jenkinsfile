@@ -5,7 +5,7 @@ pipeline {
         stage('Setup') {
             steps {
                 // Clone repository
-                git 'https://github.com/yourusername/yourrepository.git'
+                git 'https://github.com/beniye19/gallery'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
         stage('Notify Slack') {
             steps {
                 // Send Slack notification on successful deploy
-                slackSend channel: 'YourFirstName_IP1', color: 'good', message: "Build #${env.BUILD_NUMBER} deployed successfully. View at: ${env.RENDER_URL}"
+                slackSend channel: 'bensonmwangi_ip1', color: 'good', message: "Build #${env.BUILD_NUMBER} deployed successfully. View at: ${env.RENDER_URL}"
             }
         }
     }
